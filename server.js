@@ -7,7 +7,8 @@ const port =process.env.PORT || 3002;
 
 connectDb();
 app.use(express.json());
-app.use("/api/contacts",require("./routes/contactRoutes"))
+app.use("/api/contacts",require("./routes/contactRoutes"));
+app.use("/api/user",require("./routes/userRoutes"));
 app.use(errorHandler);
 
  app.listen(port,()=>{
